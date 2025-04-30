@@ -1,5 +1,6 @@
 //Esse codigo tem como objetivo encontrar números primos entre dois números escolhidos pelo usuario
 //O usuario escolhe o primeiro número e o segundo numero
+//teste github
 #include<stdio.h>
 #include<locale.h>
 #include<stdbool.h>
