@@ -1,0 +1,36 @@
+//Este codigo deve calcular o produto vetorial de dois vetores de inteiros e exibir o resultado. O código lê dois vetores de inteiros e exibe o produto vetorial dos dois vetores.
+#include <stdio.h>
+#include <locale.h> 
+
+int main() {
+    setlocale(LC_ALL, "Portuguese"); // Define o locale para português
+
+    int vetor1[3], vetor2[3], produto_vetorial[3]; // Declaração de vetores de inteiros
+    int i; // Declaração de variável de controle
+
+    // Leitura do primeiro vetor
+    printf("Digite os elementos do primeiro vetor 3x1:\n");
+    for (i = 0; i < 3; i++) {
+        scanf("%d", &vetor1[i]); // Lê os elementos do primeiro vetor
+    }
+
+    // Leitura do segundo vetor
+    printf("Digite os elementos do segundo vetor 3x1:\n");
+    for (i = 0; i < 3; i++) {
+        scanf("%d", &vetor2[i]); // Lê os elementos do segundo vetor
+    }
+
+    // Cálculo do produto vetorial
+    produto_vetorial[0] = vetor1[1] * vetor2[2] - vetor1[2] * vetor2[1];
+    produto_vetorial[1] = vetor1[2] * vetor2[0] - vetor1[0] * vetor2[2];
+    produto_vetorial[2] = vetor1[0] * vetor2[1] - vetor1[1] * vetor2[0];
+
+    // Exibir o produto vetorial
+    printf("Produto vetorial dos vetores:\n");
+    for (i = 0; i < 3; i++) {
+        printf("%d ", produto_vetorial[i]); // Exibe os elementos do produto vetorial
+    }
+    printf("\n"); // Nova linha após exibir o resultado
+
+    return 0; // Retorna 0 para indicar que o programa terminou com sucesso
+}
